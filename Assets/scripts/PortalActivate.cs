@@ -9,8 +9,6 @@ public class PortalActivate : MonoBehaviour {
     private Vector3 playerPos;
     private float colorInit = 0.2f;
     private float colorTransfer = 0.004f;
-    // Use this for initialization	
-    // Update is called once per frame
     void Start () {
         portal = transform;
         playerPos = portal.position - player.position;
