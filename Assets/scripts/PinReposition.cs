@@ -26,7 +26,8 @@ public class PinReposition : MonoBehaviour
                 yield return new WaitForSeconds(2f);
                 for (int i = 0; i < _pins.Length; i++)
                 {
-                    if (( _pins[i].transform.GetChild(0).position[1] > 0.01f || _pins[i].transform.GetChild(0).position[1] < - 0.01f) && FalenPins != 10)
+                    if (( _pins[i].transform.GetChild(0).position[1] > 0.01f ||
+                        _pins[i].transform.GetChild(0).position[1] < - 0.01f) )//&& FalenPins != 10)
                     {
                         FalenPins += 1;
                     }

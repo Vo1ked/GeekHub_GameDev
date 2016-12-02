@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BowlingPlay : MonoBehaviour
 {
-    public int PushingForse = 100;
+    public int PushingForse;
     public short GameStage ;
 
     IEnumerator ChangeXPos()
@@ -70,7 +70,7 @@ public class BowlingPlay : MonoBehaviour
     IEnumerator ChangeForse()
     {
         int force = 100;
-        bool inMove = false;
+        bool inMove;
         for (;;)
         {
             if (transform.position.z > 6f && transform.position.z < 41f)
