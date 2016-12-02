@@ -37,36 +37,36 @@ public class BowlingPlay : MonoBehaviour
 
     //IEnumerator ChageAngle()
     //{
-        //for (;;)
-        //{
-            //float anglePos = 0.001f;
-            //Quaternion rotation =transform.parent.rotation;
-            //if (GameStage == 2)
-            //{
-                //gameObject.transform.Find("Angle").gameObject.SetActive(true);
-                //for (;;)
-                //{
-                    //transform.parent.rotation = rotation;
-                    //anglePos++;
-                    //rotation[2] = anglePos;
-                    //if (anglePos > 14)
-                        //anglePos *= -1;
-                    //else if (anglePos < -14)
-                        //anglePos *= -1;
-                    //yield return new WaitForSeconds(0.05f);
-                    //if (Input.GetButton("Fire1"))
-                    //{
-                       // gameObject.transform.Find("Angle").gameObject.SetActive(false);
-                        //GameStage = 3;
-                        //yield return new WaitForSeconds(1);
-                       // break;
-                   // }
+    //    for (;;)
+    //    {
+    //        float anglePos = 0.001f;
+    //        Quaternion rotation = transform.parent.rotation;
+    //        if (GameStage == 2)
+    //        {
+    //            gameObject.transform.Find("Angle").gameObject.SetActive(true);
+    //            for (;;)
+    //            {
+    //                transform.parent.rotation = rotation;
+    //                anglePos++;
+    //                rotation[2] = anglePos;
+    //                if (rotation.eulerAngles.y > 14)
+    //                    anglePos *= -1;
+    //                else if (rotation.eulerAngles.y < -345)
+    //                    anglePos *= -1;
+    //                yield return new WaitForSeconds(0.05f);
+    //                if (Input.GetButton("Fire1"))
+    //                {
+    //                    gameObject.transform.Find("Angle").gameObject.SetActive(false);
+    //                    GameStage = 3;
+    //                    yield return new WaitForSeconds(1);
+    //                    break;
+    //                }
 
-               // }
-          //  }
-         //   yield return new WaitForFixedUpdate();
-       // }
-   // }
+    //            }
+    //        }
+    //        yield return new WaitForFixedUpdate();
+    //    }
+    //}
     IEnumerator ChangeForse()
     {
         int force = 100;
@@ -106,7 +106,7 @@ public class BowlingPlay : MonoBehaviour
 	void Start ()
 	{
         StartCoroutine(ChangeXPos());
-       // StartCoroutine(ChageAngle());
+        //StartCoroutine(ChageAngle());
         StartCoroutine(ChangeForse());
 
         GameStage = 0;
