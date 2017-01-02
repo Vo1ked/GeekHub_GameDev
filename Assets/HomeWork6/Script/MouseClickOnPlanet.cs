@@ -26,7 +26,6 @@ public class MouseClickOnPlanet : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 10000.0f))
             {
                 hit.collider.transform.tag = "Select";
-                Debug.Log(hit.collider.name);
                 _selectedPlanet = GameObject.FindWithTag("Select");
                 _planetName.GetComponent<Text>().text = _selectedPlanet.name;
                 _planetInfo.GetComponent<Text>().text = "days pass "+_selectedPlanet.GetComponent<UIinfoAndSpeed>().RotateCount
