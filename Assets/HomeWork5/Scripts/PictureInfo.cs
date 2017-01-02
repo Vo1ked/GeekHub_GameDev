@@ -12,7 +12,7 @@ public class PictureInfo : MonoBehaviour
     [SerializeField]
     private Transform _PictureName;
 
-    private bool _pictureInfoTextVisible = false;
+    private bool _pictureInfoTextVisible;
 
     IEnumerator ButtonAnimation()
     {
@@ -184,15 +184,10 @@ public class PictureInfo : MonoBehaviour
                     " завуалировав его причудливыми геометрическими формами.";
                 break;
         }
-      _pictureInfoTextVisible = !_pictureInfoTextVisible;
+        _pictureInfoTextVisible = !_pictureInfoTextVisible;
         _pictureInfoText.transform.GetComponent<Animator>().SetBool("ChangeScale", _pictureInfoTextVisible);
-        //_pictureInfoText.transform.GetChild(1).GetComponent<Scrollbar>().value = 1;
     }
 
-   // void OnTriggerStay(Collider other)
-  //  {
-
-   // }
 
     void OnTriggerExit(Collider other)
     {
